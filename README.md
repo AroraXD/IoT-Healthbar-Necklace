@@ -23,3 +23,5 @@ To build this project you will need:
 - Temprature sesnor
 - Wires
 - Some sort of case to keep it in when you're done
+
+A breif overview of the design process/making off can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
