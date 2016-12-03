@@ -98,7 +98,7 @@ Remember when I told you to make an account of IFTTT? This is where you get to u
 - On adafruit, select "send data to adafruit io" then pick feedname2 and in data write ``tweet``
 - Hit create action and Finish and you now have a IoT device that flashs blue whenever you tweet
 
-> Full list commands the code will respond to:
+##Full list commands the code will respond to:
 
 ```
 tweet
