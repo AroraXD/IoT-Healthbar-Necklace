@@ -48,6 +48,7 @@ If you push the buttons, it will also print out here, press each one and both at
 - Button 2 will switch between lighting modes.
 
 ##Connecting it to your phone and the internet
+###To your phone
 To get it online you'll need to first connect it to your phone
 Download the bluefruit connect app for your [android](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=en_GB) or iPhone(https://itunes.apple.com/gb/app/adafruit-bluefruit-le-connect/id830125974?mt=8)
 > Note i've only tested this on android, it's probably the same on iOS
@@ -60,7 +61,7 @@ Download the bluefruit connect app for your [android](https://play.google.com/st
 6. The feather should flash blue. That means everything is working so far 😃  💙 
 7. You can now control the feather from you're phone.
 
-###but what about from the internet?
+###But what about from the internet?
 - You'll need to make an account on [io.adafruit](https://io.adafruit.com) and [IFTTT](https://ifttt.com)
 - Create 2 feeds on io.adafruit, call them whatever you want.
 - Click on MQTT at the top of the app
@@ -88,4 +89,22 @@ Password: see quote above
 
 > You can test this buy going to feedname2 clicking create data and typing ``tweet`` which should cause the text to apear on your phone and make your feather flash blue.
 
-A breif overview of the design process/making off can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
+###Making it do stuff with the internet
+Remember when I told you to make an account of IFTTT? This is where you get to use that.
+- Go to [my applets](https://ifttt.com/my_applets) on ifttt.
+- Create a new applet, using twitter and adafruit, you'll need to link your accounts.
+- On twitter select any option you want, I used "New tweet by you"
+- On adafruit, select "send data to adafruit io" then pick feedname2 and in data write ``tweet``
+- Hit create action and Finish and you now have a IoT device that flashs blue whenever you tweet
+
+> Full list commands I have programed my code to respond to
+```
+tweet
+
+flashlightON
+
+flashlightOFF
+
+```
+
+A breif overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
