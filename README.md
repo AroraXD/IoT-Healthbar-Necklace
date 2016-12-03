@@ -8,6 +8,7 @@ This project is wearble device that you can control from your phone and the inte
 - Lights up random colours
 - Flashes blue when you send a tweet
 - Lights up bright white when you send it a command (to be used as a flashlight)
+- Sends a notification to your phone when it gets too cold
 - More features coming soon
 
 ##To build this project you will need:
@@ -104,17 +105,26 @@ Remember when I told you to make an account of IFTTT? This is where you get to u
 
 ```
 tweet
+Flashes blue
 
 flashlightON
+Maxes out brightness, changes all neopixels to white
 
 flashlightOFF
+Turns off flashlight mode.
 
 random
+Default mode, displays random strips of colours
 
 healthbar
+Changes mode to healthbar
 
 brightness xxx
 >replace xxx with a number between 0 and 255
+Sets the brightness of the modes
+
+flash
+Flashes white
 
 ```
 You can replace ``tweet`` in the above example with any of these to make it react to the internet.
@@ -122,9 +132,8 @@ If you want to control it via a smartwatch you'll need to use the maker channel.
 On a pebble I used [THISBUTTON](https://apps.getpebble.com/en_US/application/558cb1c6933a11ae5e000038?section=watchapps)
 
 ####Addtionally when both buttons are pressed it sends data
-//todo add to code then update this section of the readme
-
-
+When both buttons are pressed it will add ``100`` to feed1name, otherwise it will contsantly update feed1name with the tempreature in celsius. 
+I have created a IFTTT aplet that send a notifcation to my phone when it gets too cold.
 
 ##An overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
 
