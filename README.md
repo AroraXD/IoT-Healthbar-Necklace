@@ -52,7 +52,7 @@ If you push the buttons, it will also print out here, press each one and both at
 ##Connecting it to your phone and the internet
 ###To your phone
 To get it online you'll need to first connect it to your phone
-Download the bluefruit connect app for your [android](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=en_GB) or iPhone(https://itunes.apple.com/gb/app/adafruit-bluefruit-le-connect/id830125974?mt=8)
+Download the bluefruit connect app for your [android](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=en_GB) or [iPhone](https://itunes.apple.com/gb/app/adafruit-bluefruit-le-connect/id830125974?mt=8)
 > Note i've only tested this on android, it's probably the same on iOS
 
 1. Open up the app
