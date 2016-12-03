@@ -1,5 +1,6 @@
 # IoT-Healthbar-Necklace
-Physical Computing Project
+
+A Physical Computing Project
 
 This project is wearble device that you can control from your phone and the internet.
 
@@ -123,3 +124,8 @@ On a pebble I used [THISBUTTON](https://apps.getpebble.com/en_US/application/558
 
 
 ##An overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
+
+:octocat::octocat::octocat::octocat::octocat::octocat:
+If you run into any issues contact me on [twitter](https://twitter.com/uveavanto) or open an github issue.
+If there are spelling/grammer mistakes in this guide then open a pull request :octocat:
+
