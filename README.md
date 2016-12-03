@@ -114,8 +114,12 @@ healthbar
 
 ```
 You can replace ``tweet`` in the above example with any of these to make it react to the internet.
+If you want to control it via a smartwatch you'll need to use the maker channel.
+On a pebble I used [THISBUTTON](https://apps.getpebble.com/en_US/application/558cb1c6933a11ae5e000038?section=watchapps)
 
 ####Addtionally when both buttons are pressed it sends data
 //todo add to code then update this section of the readme
+
+
 
 ##An overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
