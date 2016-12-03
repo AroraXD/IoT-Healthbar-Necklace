@@ -38,10 +38,11 @@ This project is wearble device that you can control from your phone and the inte
 Images are made using Fritzing (source file is in the repo)
 
 ##Upload the code
-Use the ardunio IDE to upload the code in the repo to the feather, make sure you select the right board and port
+Use the ardunio IDE to upload the code in the repo to the feather, make sure you select the right board and port.
 If you haven't used your feather before you'll need to instal the libraries from Adafruit. Check out [this guide](https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/using-with-arduino-ide) for more info on that.
 You'll need their [BLE libeary](https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/installing-ble-library) aswell.
 
+######Test it
 If everything is set up properly the neopixels should light up.
 Once the code is uploaded keep the feather plugged into your computer and open up the serial monitor, it should give you a stream of numbers, the temprature readings from the sensor.
 If you push the buttons, it will also print out here, press each one and both at the same time to make sure its all working.
