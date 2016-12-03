@@ -28,8 +28,8 @@ This project is wearble device that you can control from your phone and the inte
 
 ![Breadboard](/images/breadboard.png)
 
-* note it may be easier to stack the feather and featherwing
-* the battery is shown as not connected on the schematic, just plug it into the side of the feather
+> * note it may be easier to stack the feather and featherwing
+> * the battery is shown as not connected on the schematic, just plug it into the side of the feather
 
 ![Schematic](/images/schematic.png)
 
