@@ -7,6 +7,7 @@ This project is wearble device that you can control from your phone and the inte
 - Lights up random colours
 - Flashes blue when you send a tweet
 - Lights up bright white when you send it a command (to be used as a flashlight)
+- More features coming soon
 
 ##To build this project you will need:
 - Adafruit Feather 32u4 Bluefruit LE
@@ -106,10 +107,14 @@ flashlightON
 
 flashlightOFF
 
+random
+
+healthbar
+
 ```
 You can replace ``tweet`` in the above example with any of these to make it react to the internet.
 
 ####Addtionally when both buttons are pressed it sends data
 //todo add to code then update this section of the readme
 
-A breif overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
+##An overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
