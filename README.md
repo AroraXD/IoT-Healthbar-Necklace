@@ -68,6 +68,7 @@ Download the bluefruit connect app for your [android](https://play.google.com/st
 
 > Replace username/feed/feedname with your username and the names of your feeds
 > For password press the scan code button then on io.adafruit go to settings then view AIO key.
+
 ```
 Server
 Address: io.adafruit.com
@@ -84,6 +85,7 @@ Username: username
 Password: see quote above
 ```
 - Now thats set up you can send commands from anywhere to your feather. 
+
 > You can test this buy going to feedname2 clicking create data and typing ``tweet`` which should cause the text to apear on your phone and make your feather flash blue.
 
 A breif overview of the design process/making off can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
