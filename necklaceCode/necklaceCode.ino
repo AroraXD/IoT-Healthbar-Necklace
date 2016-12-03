@@ -143,7 +143,7 @@ void loop() {
 
   if (button2down && button1down && !bothButtonsDown)
   {
-    
+    Serial.println(Both buttons pressed);
     ble.print("AT+BLEUARTTX=");
     ble.println("BothButtonsPressed");
     bothButtonsDown = true;
@@ -343,6 +343,11 @@ void commandChecker(String com)
     }
     else if (com == "flashlightOFF") {
       specialState = 0;
+    }
+     else if (com == "random") {
+      state = 1;
+    }else if (com == "healthbar") {
+      state = 2;
     }
 
   }
