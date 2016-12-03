@@ -3,19 +3,19 @@ Physical Computing Project
 
 This project is wearble device that you can control from your phone and the internet.
 
-Stuff it does;
+##Stuff it does;
 -Lights up random colours
 -Flashes blue when you send a tweet
 -Lights up bright white when you send it a command (to be used as a flashlight)
 
-To build this project you will need:
+##To build this project you will need:
 - Adafruit Feather 32u4 Bluefruit LE
 - Adafruit NeoPixel FeatherWing
 - Male Header pins
 - Female header pins (buying the ones made for the feather is best to keep the project slim)
 - A smart phone
 
---- Optional ---
+###--- Optional ---
 - lipo battery
 - JST jack cable (for the battery, if it doesn't already come with one)
 - 2 push buttons
@@ -24,15 +24,13 @@ To build this project you will need:
 - Wires
 - Some sort of case to keep it in when you're done
 
-Connect components up like so:
+##Connect components up like so:
 (note it may be easier to stack the feather and featherwing)
 (the battery is shown as not connected on the schematic, just plug it into the side of the feather)
 
 ![Breadboard](/images/breadboard.png)
-Format: ![Alt Text](url)
 
 ![Schematic](/images/schematic.png)
-Format: ![Alt Text](url)
 
 Images are made using Fritzing (source file is in the repo)
 
