@@ -113,6 +113,9 @@ random
 
 healthbar
 
+brightness xxx
+>replace xxx with a number between 0 and 255
+
 ```
 You can replace ``tweet`` in the above example with any of these to make it react to the internet.
 If you want to control it via a smartwatch you'll need to use the maker channel.
