@@ -99,6 +99,8 @@ void loop() {
     float temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset
     //to degrees ((volatge - 500mV) times 100)
     Serial.print(temperatureC); Serial.println(" degrees C");
+    ble.print("AT+BLEUARTTX=");
+    ble.println(temperatureC);
   }
 
 
@@ -145,7 +147,7 @@ void loop() {
   {
     Serial.println("Both buttons pressed");
     ble.print("AT+BLEUARTTX=");
-    ble.println("BothButtonsPressed");
+    ble.println(100);
     bothButtonsDown = true;
     whiteFlash();
   } else
@@ -344,18 +346,20 @@ void commandChecker(String com)
     else if (com == "flashlightOFF") {
       specialState = 0;
     }
-     else if (com == "random") {
+    else if (com == "random") {
       state = 1;
-    }else if (com == "healthbar") {
+    } else if (com == "healthbar") {
       state = 2;
     }//todo make check for "brightness xxx"
-    else if (com.substring(0,10) == "brightness")
+    else if (com.substring(0, 10) == "brightness")
     {
       String no = com.substring(11);
       brightness = no.toInt();
       Serial.print("brightness: ");
       Serial.println(brightness);
-
+    }else if(com == "flash")
+    {
+      whiteFlash();  
     }
   }
 }
