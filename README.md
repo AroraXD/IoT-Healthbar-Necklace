@@ -4,9 +4,9 @@ Physical Computing Project
 This project is wearble device that you can control from your phone and the internet.
 
 ##Stuff it does;
--Lights up random colours
--Flashes blue when you send a tweet
--Lights up bright white when you send it a command (to be used as a flashlight)
+- Lights up random colours
+- Flashes blue when you send a tweet
+- Lights up bright white when you send it a command (to be used as a flashlight)
 
 ##To build this project you will need:
 - Adafruit Feather 32u4 Bluefruit LE
@@ -52,14 +52,37 @@ To get it online you'll need to first connect it to your phone
 Download the bluefruit connect app for your [android](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=en_GB) or iPhone(https://itunes.apple.com/gb/app/adafruit-bluefruit-le-connect/id830125974?mt=8)
 > Note i've only tested this on android, it's probably the same on iOS
 
-Open up the app
-Make sure you're feather is on
-Click connect next to "Adafruit Bluefruit LE"
-Select UART
-Once you're connected it will give you a text field, type in `tweet` then press send.
-The feather should flash blue. That means everything is working so far 😃  💙 
-You can now control the feather from you're phone.
+1. Open up the app
+2. Make sure you're feather is on
+3. Click connect next to "Adafruit Bluefruit LE"
+4. Select UART
+5. Once you're connected it will give you a text field, type in `tweet` then press send.
+6. The feather should flash blue. That means everything is working so far 😃  💙 
+7. You can now control the feather from you're phone.
 
-but what about from the internet?
+###but what about from the internet?
+- You'll need to make an account on [io.adafruit](https://io.adafruit.com) and [IFTTT](https://ifttt.com)
+- Create 2 feeds on io.adafruit, call them whatever you want.
+- Click on MQTT at the top of the app
+- Fill in the details: 
+> Replace username/feed/feedname with your username and the names of your feeds
+> For password press the scan code button then on io.adafruit go to settings then view AIO key.
+```
+Server
+Address: io.adafruit.com
+Port: 1883
+
+Publish
+UART RX username/feed/feedname1
+
+Subscribe
+Topic username/feed/feedname2
+
+Advance
+Username: username
+Password: see quote above
+```
+- Now thats set up you can send commands from anywhere to your feather. 
+> You can test this buy going to feedname2 clicking create data and typing ``tweet`` which should cause the text to apear on your phone and make your feather flash blue.
 
 A breif overview of the design process/making off can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
