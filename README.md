@@ -24,4 +24,16 @@ To build this project you will need:
 - Wires
 - Some sort of case to keep it in when you're done
 
+Connect components up like so:
+(note it may be easier to stack the feather and featherwing)
+(the battery is shown as not connected on the schematic, just plug it into the side of the feather)
+
+![Breadboard](/images/breadboard.png)
+Format: ![Alt Text](url)
+
+![Schematic](/images/schematic.png)
+Format: ![Alt Text](url)
+
+Images are made using Fritzing (source file is in the repo)
+
 A breif overview of the design process/making off can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
