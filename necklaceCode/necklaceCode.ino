@@ -348,7 +348,14 @@ void commandChecker(String com)
       state = 1;
     }else if (com == "healthbar") {
       state = 2;
-    }//todo make check for "brightness x"
+    }//todo make check for "brightness xxx"
+    else if (com.substring(0,10) == "brightness")
+    {
+      String no = com.substring(11);
+      brightness = no.toInt();
+      Serial.print("brightness: ");
+      Serial.println(brightness);
 
+    }
   }
 }
