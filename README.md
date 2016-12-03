@@ -65,6 +65,7 @@ Download the bluefruit connect app for your [android](https://play.google.com/st
 - Create 2 feeds on io.adafruit, call them whatever you want.
 - Click on MQTT at the top of the app
 - Fill in the details: 
+
 > Replace username/feed/feedname with your username and the names of your feeds
 > For password press the scan code button then on io.adafruit go to settings then view AIO key.
 ```
