@@ -129,5 +129,5 @@ On a pebble I used [THISBUTTON](https://apps.getpebble.com/en_US/application/558
 ##An overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
 
 ###:octocat: If you run into any issues feel free to contact me on [twitter](https://twitter.com/uveavanto):octocat:
-###:octocat:If there are spelling/grammer mistakes in this guide then open a pull request :octocat:
+###:octocat: If there are spelling/grammer mistakes in this guide then open a pull request :octocat:
 
