@@ -143,7 +143,7 @@ void loop() {
 
   if (button2down && button1down && !bothButtonsDown)
   {
-    Serial.println(Both buttons pressed);
+    Serial.println("Both buttons pressed");
     ble.print("AT+BLEUARTTX=");
     ble.println("BothButtonsPressed");
     bothButtonsDown = true;
@@ -348,7 +348,7 @@ void commandChecker(String com)
       state = 1;
     }else if (com == "healthbar") {
       state = 2;
-    }
+    }//todo make check for "brightness x"
 
   }
 }
