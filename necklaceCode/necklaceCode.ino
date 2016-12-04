@@ -12,11 +12,14 @@ const int tempPin = 0;        //the analog pin the TMP36's Vout (sense) pin is c
 //the resolution is 10 mV / degree centigrade with a
 //500 mV offset to allow for negative temperatures
 int tempReading;        // the analog reading from the sensor
+float temperatureC;
 
 const int button1Pin = 20;//A2 on baord
 const int button2Pin = 21;//A3 on board
 
 long timerA = 0;
+long timerB = 0;
+
 
 bool button1down = false;
 bool button2down = false;
@@ -33,7 +36,7 @@ int specialState = 0;
 // 1 = twitter
 // 2 = flashlight = super bright leds
 
-int brightness = 3;
+int brightness = 4;
 
 //bluetoothstuff
 #include <Arduino.h>
@@ -79,31 +82,27 @@ void loop() {
 
   pollForCommand();
 
+  //update leds every secound
+  if (millis() > timerB)
+  {
+    timerB = millis() + 1000;
+    updateLEDS();
+  }
+
+  //check temprature every 20 secounds
   if (millis() > timerA)
   {
-    timerA = millis() + 2000;
-
-    updateLEDS();
-
-    //temp stuff
+    timerA = millis() + 20000;
     tempReading = analogRead(tempPin);
-    //Serial.print("Temp reading = ");
-    //Serial.print(tempReading);     // the raw analog reading
-    // converting that reading to voltage, which is based off the reference voltage
     float voltage = tempReading * aref_voltage;
     voltage /= 1024.0;
-    // print out the voltage
-    // Serial.print(" - ");
-    //Serial.print(voltage); Serial.print(" volts"); Serial.println(millis());
-    // now print out the temperature
-    float temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset
-    //to degrees ((volatge - 500mV) times 100)
+    temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset to degrees ((volatge - 500mV) times 100)
     Serial.print(temperatureC); Serial.println(" degrees C");
     ble.print("AT+BLEUARTTX=");
     ble.println(temperatureC);
   }
 
-
+  //checks for button inputs
   int button1 = digitalRead(button1Pin);
   int button2 = digitalRead(button2Pin);
 
@@ -147,14 +146,13 @@ void loop() {
   {
     Serial.println("Both buttons pressed");
     ble.print("AT+BLEUARTTX=");
-    ble.println(100);
+    ble.println(100); //sends value of 100 to phone when both buttons are pressed down.
     bothButtonsDown = true;
     whiteFlash();
   } else
   {
     bothButtonsDown = false;
   }
-
 }
 
 static void updateLEDS() {
@@ -165,7 +163,7 @@ static void updateLEDS() {
     else if (state == 2)
     {
       TurnLEDSoff();
-      healthBar(2); //shows health bar
+      healthBar(); //shows health bar
     }
     else if (state == 0)
       TurnLEDSoff(); //turns off all leds
@@ -204,9 +202,20 @@ static void TurnLEDSoff() {
 
 }
 
-static void healthBar(int h) {
-  uint32_t c;
-  c = strip.Color(0, brightness, 0);
+static void healthBar() {
+  //maps temp between 15 and 26 to 0-8
+  temperatureC = constrain(temperatureC, 15, 26);
+  int h = map(temperatureC, 15, 26, 1, 8);
+
+  uint32_t c; //set colour
+  if (h < 3) {
+    c = strip.Color(0, 0, brightness);
+  } else if (h < 7) {
+    c = strip.Color(0, brightness, 0);
+  } else {
+    c = strip.Color(brightness, 0, 0);
+  }
+
   for (int i = 0; i < 8; i++) {
     int x = i;
     if (i < h)
@@ -357,9 +366,9 @@ void commandChecker(String com)
       brightness = no.toInt();
       Serial.print("brightness: ");
       Serial.println(brightness);
-    }else if(com == "flash")
+    } else if (com == "flash")
     {
-      whiteFlash();  
+      whiteFlash();
     }
   }
 }
