@@ -134,7 +134,7 @@ On a pebble I used [THISBUTTON](https://apps.getpebble.com/en_US/application/558
 ####Addtionally when both buttons are pressed it sends data
 #####When both buttons are pressed it will add ``100`` to feed1name, otherwise it will contsantly update feed1name with the tempreature in celsius. 
 I have created a IFTTT aplet that send a notifcation to my phone when it gets too cold, by monitoring the feed and checking if it is below 15.
-I have also set it to tweet for me if I press both buttons at the same time; By monitoring the feed and seeing if the value is equal to ```100``.
+I have also set it to tweet for me if I press both buttons at the same time; By monitoring the feed and seeing if the value is equal to ``100``.
 
 ##An overview of my design process/making off  with pictures can be found [on this blog](http://physicalcomputingproject.tumblr.com/)
 
