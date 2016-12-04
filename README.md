@@ -6,6 +6,7 @@ This project is wearble device that you can control from your phone and the inte
 
 ##Stuff it does;
 - Lights up random colours
+_ Lights up depending on the temprature
 - Flashes blue when you send a tweet
 - Lights up bright white when you send it a command (to be used as a flashlight)
 - Sends a notification to your phone when it gets too cold
@@ -117,7 +118,7 @@ random
 Default mode, displays random strips of colours
 
 healthbar
-Changes mode to healthbar
+Changes mode to healthbar, lights up depending on the temprature turns blue if too cold, green if normal and red if too hot.
 
 brightness xxx
 >replace xxx with a number between 0 and 255
